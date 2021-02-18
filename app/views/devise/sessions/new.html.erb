@@ -1,0 +1,29 @@
+<div class="devise-main">
+<h2>ログイン</h2>
+
+<%= form_with(model: @user, url: user_session_path, local: true ) do |f| %>
+  <%= render 'share/error_messages', model: @user, model: f.object %>
+
+  <div class="field">
+    <%= f.label :email %>
+    <span class="indispensable">必須</span><br />
+    <%= f.email_field :email, autofocus: true, autocomplete: "email", class:"text-form" %>
+  </div>
+
+  <div class="field">
+    <%= f.label :パスワード %>
+    <span class="indispensable">必須</span><br />
+    <%= f.password_field :password, autocomplete: "current-password",class:"text-form" %>
+  </div>
+
+  <div class="actions">
+    <%= f.submit "ログイン", class:"submit-btn" %>
+  </div>
+<% end %>
+
+<div class="back-link">
+  <%= render "devise/shared/links" %>
+  <%= link_to "トップページに戻る", root_path %>
+</div>
+
+</div>

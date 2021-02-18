@@ -1,0 +1,32 @@
+.header {
+  background-color: gainsboro;
+  height: 80px;
+  width: 100vw;
+  position:fixed;
+  left: 0;
+  top:0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.left-bar{
+  margin-left:50px ;
+  font-size:25px;
+	text-align:center;
+  text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 5px 5px dimgray;
+  transform: rotate(-7deg);
+}
+
+.nav-list{
+  margin-right: 50px;
+  
+}
+
+.nav-btn{
+  margin-left: 10px;
+  color: dimgray;
+  border: dashed 1px dimgray;
+  padding: 8px;
+  background-color: white;
+}
