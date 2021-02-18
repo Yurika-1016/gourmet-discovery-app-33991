@@ -2,9 +2,10 @@
   background-color: gainsboro;
   height: 30px;
   width: 100vw;
-  position:fixed;
+  position: absolute;
   left: 0;
   bottom:0;
   text-align: center;
   font-size: 12px;
+  margin-bottom: -30px;
 }

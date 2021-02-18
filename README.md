@@ -84,7 +84,7 @@ gourmet-discoveryアプリ
 ## Postsテーブル
 |           column           |      type       |                            option                                |
 | -------------------------- | --------------- | ---------------------------------------------------------------- |
-|           text             |     string      |                           null:false                             |
+|           text             |      text       |                                                                  |
 |          age_id            |     integer     |       null:false, numericality: { other_than: 1 }                |
 |       prefecture_id        |     integer     |       null:false, numericality: { other_than: 1 }                |
 |         genre_id           |     integer     |       null:false, numericality: { other_than: 1 }                |
