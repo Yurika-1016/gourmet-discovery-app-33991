@@ -1,0 +1,8 @@
+.error-alert{
+  display: block;
+  font-size: 14px;
+}
+
+.error-message{
+  list-style: none;
+}

@@ -11,4 +11,6 @@ class User < ApplicationRecord
     validates :nickname
     validates :gender_id, numericality: { other_than: 1 }
   end
+
+  has_many :posts, dependent: :destroy
 end

@@ -1,0 +1,58 @@
+.main{
+  margin: 100px 0px 200px;
+  min-height: 100%;
+}
+
+.post-main{
+  border: dashed 1px black;
+  background-color:whitesmoke;
+  color: black;
+  margin: 0px 20% 0px;
+  text-align: center;
+  padding: 5px;
+  display:block;
+  align-items: center;
+}
+
+.selection-list{
+  display: flex;
+  justify-content: center;
+}
+
+.text-area-form{
+  margin: 12px;
+  width: 400px;
+  resize: none;
+}
+
+.not-indispensable{
+  background-color: dimgrey;
+  color: white;
+  border: 1px solid dimgrey;
+  border-radius: 3px;
+  padding: 2px;
+  font-size: 10px;
+}
+
+.text-big-area-form{
+  margin: 12px;
+  width: 400px;
+  height: 80px;
+  resize: none;
+}
+
+.click-upload{
+  font-size: 12px;
+}
+
+.post-submit-btn{
+  margin: 15px;
+  border: 1px solid dimgrey;
+  background-color: lightpink;
+  width: 200px;
+  height: 30px;
+}
+
+.back-root-path{
+  text-align: center;
+}
