@@ -74,11 +74,10 @@ gourmet-discoveryアプリ
 ## Usersテーブル
 |      column      |      type       |                 option                    |
 | ---------------- | --------------- | ----------------------------------------- |
-|    last_name     |     string      |               null:false                  |
-|    first_name    |     string      |               null:false                  |
+|     nickname     |     string      |               null:false                  |
 |      email       |     string      |               null:false                  |
 |encrypted_password|     string      |               null:false                  |
-|       gender     |     integer     |null:false, numericality: { other_than: 1 }|
+|    gender_id     |     integer     |null:false, numericality: { other_than: 1 }|
 ### Association
 - has_many :posts
 

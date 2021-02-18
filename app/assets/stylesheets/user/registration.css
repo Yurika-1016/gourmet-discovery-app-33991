@@ -1,0 +1,52 @@
+body { 
+  width: 100vw;
+  height: 100vh;
+}
+
+.devise-main{
+  background-color:aliceblue;
+  box-shadow: 0 10px 25px 0 rgba(60, 194, 235, 0.5);
+  color: black;
+  text-align: center;
+  border-radius: 20px ;
+  margin: 10% 25%;
+  padding: 5px;
+  display:block;
+  align-items: center;
+}
+
+.indispensable {
+  background-color: crimson;
+  color: white;
+  border: 1px solid crimson;
+  border-radius: 3px;
+  padding: 2px;
+  font-size: 10px;
+}
+
+.text-form{
+  margin: 12px;
+  width: 200px;
+}
+
+.select-box{
+  margin: 12px;
+}
+
+.submit-btn{
+  margin: 15px;
+  border: 1px solid dimgrey;
+  background-color: skyblue;
+  width: 200px;
+  height: 30px;
+}
+
+.back-link{
+  font-size: 14px;
+}
+
+
+a {
+  text-decoration: none;
+  color: black;
+}
