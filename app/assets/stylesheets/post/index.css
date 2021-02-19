@@ -1,0 +1,16 @@
+.top-page-main{
+  position:fixed;
+  width: 80%;
+  top:100px;
+  bottom: 50px;
+  padding: 100px;
+}
+
+.top-page-main-text{
+  color: brown;
+}
+
+.jmap{
+  height: 100%;
+  width: 100%;
+}

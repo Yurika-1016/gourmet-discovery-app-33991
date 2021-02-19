@@ -4,7 +4,14 @@
     <title>GourmetDiscoveryApp33991</title>
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script type="text/javascript" src="./jmap.js"></script>
+    
+    <script type = "text/javascript">
+        $(document).ready(function() {
+            $('#jmap').jmap();
+        });
+    </script>
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
