@@ -8,14 +8,15 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
+  z-index: 30;
 }
 
 .left-bar{
-  margin-left:50px ;
+  margin-left:40px ;
   font-size:25px;
 	text-align:center;
   text-shadow: 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 1px 1px 1px #fff, -1px 1px 1px #fff, 1px -1px 1px #fff, -1px -1px 1px #fff, 5px 5px dimgray;
-  transform: rotate(-7deg);
+  transform: rotate(-5deg);
 }
 
 .nav-list{

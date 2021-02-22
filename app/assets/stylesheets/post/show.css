@@ -1,0 +1,28 @@
+.show-detail-page-main{
+  margin-top: 80px;
+  z-index: 10;
+  text-align: center;
+}
+
+.post-content{
+  margin: 0 25%;
+  padding: 10px;
+  background-color: whitesmoke;
+  border: 1px dashed gray;
+}
+
+.detail-image{
+  width: auto;
+  height: 40%;
+}
+
+.detail-lists{
+  list-style: none;
+  margin: auto;
+  border: antiquewhite;
+}
+
+.detail-list{
+  margin: 10px;
+  text-align: left;
+}

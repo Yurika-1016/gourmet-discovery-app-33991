@@ -1,0 +1,22 @@
+.top-page-main{
+  position:fixed;
+  width: 80%;
+  top:80px;
+  bottom: 50px;
+  padding: 70px
+}
+
+.top-page-main-text{
+  color: brown;
+}
+
+.jmap{
+  height: 100%;
+  width: 100%;
+}
+
+.all-japan-posts-link-btn{
+  color: gray;
+  margin-left: 70%;
+  font-size: 13px;
+}
