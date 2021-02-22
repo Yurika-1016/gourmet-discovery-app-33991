@@ -1,0 +1,22 @@
+<%=render 'share/header' %>
+
+<div class="show-detail-page-main">
+  <div class= post-content>
+    <div class="detail-image-class">
+      <%= image_tag @post.image, class:"detail-image" if @post.image.attached? %>
+    </div>
+    <div class="detail-lists-class">
+      <ul class="detail-lists">
+          <li class="detail-list">ジャンル:  <%= @post.genre.name %></li>
+          <li class="detail-list">都道府県:  <%= @post.prefecture.name %></li>
+          <li class="detail-list">年齢:  <%= @post.age.name %></li>
+          <li class="detail-list">場所:  <%= @post.address %></li>
+          <li class="detail-list">感想:  <%= @post.text %></li>
+          <li class="detail-list">投稿者:  <%= @post.user.nickname %></li>
+      </ul>
+    </div>
+  </div>
+</div>
+
+
+<%=render 'share/footer' %>

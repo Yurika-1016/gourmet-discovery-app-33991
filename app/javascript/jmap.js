@@ -938,9 +938,9 @@ $(document).ready(function() {
         onSelect: function(e, data) {
                 console.log(data);
                 var areaLinks={
-                    "北海道" : "area.php?area=北海道"
+                    "北海道" : "/posts/search_hokkaido"
                 }
-                //window.location.href= 'areaLinks[data.name]'
+                window.location.href= areaLinks[data.name]
         } 
         });
     });

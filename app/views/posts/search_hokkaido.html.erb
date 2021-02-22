@@ -1,10 +1,7 @@
 <%=render 'share/header' %>
 
 <div class="show-page-main">
-  日本全国のグルメ
-  <div search-prefecture>
-    <%= link_to "北海道", search_hokkaido_posts_path, class:"prefecture-search-btn" %>
-  </div>
+  北海道のグルメ
   <div class= post-contents>
     <ul class="post-lists">
       <% if @posts.present? %>

@@ -2,6 +2,7 @@ class PostsController < ApplicationController
   before_action :authenticate_user!, only: [:new]
 
   def index
+    @posts = Post.all
   end
 
   def new
@@ -15,6 +16,14 @@ class PostsController < ApplicationController
     else
       render :new
     end
+  end
+
+  def show
+    @post = Post.find(params[:id])
+  end
+
+  def search_hokkaido
+    @posts = Post.where(prefecture_id: 2)
   end
 
   private
