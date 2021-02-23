@@ -1,6 +1,60 @@
 .show-page-main{
-  margin-top: 100px;
+  margin-top: 80px;
   z-index: 10;
+}
+
+.search-class{
+  background-color:  rgb(95, 100, 100, 0.5);
+  border: 1px solid gray;
+  border-radius: 20px;
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  padding: 10px;
+  margin: 10px 5%;
+  position: fixed;
+  z-index: 40;
+}
+
+.main-search {
+  display: flex;
+  justify-content: left;
+}
+
+.main-search-area{
+  width: 400px;
+  height: 30px;
+}
+
+.main-search-btn{
+  width: 50px;
+  height: 30px;
+  border:dashed 1px dimgray;
+  background-color: lightgray;
+}
+
+.sub-search-lists{
+  margin-left: 20px;
+  display: flex;
+  align-items:center;
+  text-align: center;
+}
+
+.sub-search-title-list{
+  display: block;
+  margin: 5px;
+}
+
+.sub-search-title{
+  font-size: 14px;
+}
+
+.sub-search-btn{
+  margin-left: 5px;
+  width: 50px;
+  height: 30px;
+  border:dashed 1px dimgray;
+  background-color: lightgray;
 }
 
 .post-contents{
@@ -12,7 +66,7 @@
 
 .post-lists{
   list-style: none;
-  margin: 5px;
+  margin: 100px 5px 5px;
   display: flex;
   flex-wrap: wrap;
   justify-content: left;
