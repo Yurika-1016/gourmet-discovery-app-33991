@@ -15,4 +15,14 @@ class Post < ApplicationRecord
 
     validates :address, :image
   end
+
+  def self.search(search)
+    if search != ""
+      Post.where('text LIKE(?)', "%#{search}%")
+      .or (Post.where('address LIKE(?)', "%#{search}%"))
+    else
+      Post.all
+    end
+  end
+
 end

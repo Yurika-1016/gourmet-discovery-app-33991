@@ -2,26 +2,7 @@
 
 <div class="show-page-main">
   北海道のグルメ
-  <div class= post-contents>
-    <ul class="post-lists">
-      <% if @posts.present? %>
-        <% @posts.each do |post|%>
-          <li class='post-list'>
-          <%= link_to post_path(post.id) do %>
-            <div class="image-list">
-              <%= image_tag post.image, class:"post-image" if post.image.attached? %>
-            </div>
-          <% end %>
-          </li>
-        <% end %>
-      <% else %>
-        <div class="non-list">
-          投稿がありません。新規投稿お待ちしています。
-        </div>
-      <% end %>
-    </ul>
-  </div>
+  <%= render 'search_prefecture', posts: @posts  %>
 </div>
-
 
 <%=render 'share/footer' %>
