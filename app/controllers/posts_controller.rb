@@ -1,7 +1,9 @@
 class PostsController < ApplicationController
-  before_action :authenticate_user!, only: [:new]
-  before_action :set_post_column, except: [:new, :create, :show]
-  before_action :search_product, except: [:new, :create, :show]
+  before_action :authenticate_user!, only: [:new, :edit, :destroy]
+  before_action :set_post_column, except: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :search_product, except: [:new, :create, :show, :edit, :update, :destroy]
+  before_action :set_post, only: [:show, :edit,:update, :destroy]
+  before_action :not_user_permitted, only:[:edit, :destroy]
 
   def index
     @posts = Post.all
@@ -21,7 +23,22 @@ class PostsController < ApplicationController
   end
 
   def show
-    @post = Post.find(params[:id])
+  end
+
+  def edit
+  end
+
+  def update
+    if @post.update(post_params)
+      redirect_to post_path(@post.id)
+    else 
+      render :edit
+    end
+  end
+
+  def destroy
+    @post.destroy
+    redirect_to root_path
   end
 
   def search
@@ -235,6 +252,16 @@ class PostsController < ApplicationController
 
   def search_product
     @p = Post.ransack(params[:q])
+  end
+
+  def set_post
+    @post = Post.find(params[:id])
+  end
+
+  def not_user_permitted
+    unless current_user.id == @post.user_id
+      redirect_to post_path(@post.id)
+    end
   end
 
 end
