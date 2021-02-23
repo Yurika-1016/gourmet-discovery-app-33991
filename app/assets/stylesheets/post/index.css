@@ -4,7 +4,7 @@
 }
 
 .search-class{
-  background-color:  rgb(95, 100, 100, 0.5);
+  background-color:  rgba(95, 100, 100, 0.5);
   border: 1px solid gray;
   border-radius: 20px;
   display: flex;
