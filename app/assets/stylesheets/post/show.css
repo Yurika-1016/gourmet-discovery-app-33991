@@ -11,6 +11,15 @@
   border: 1px dashed gray;
 }
 
+.user-only-func-class{
+  text-align: end;
+}
+
+.user-only-func-btn{
+  font-size: 14px;
+  color: gray;
+}
+
 .detail-image{
   width: auto;
   height: 300px;

@@ -2,6 +2,12 @@
 
 <div class="show-detail-page-main">
   <div class= post-content>
+    <div class="user-only-func-class">
+      <% if user_signed_in? && current_user.id == @post.user_id %>
+        <%= link_to "編集", edit_post_path(@post.id), class:"user-only-func-btn" %>
+        <%= link_to "削除", post_path(@post.id), method: :delete, class:"user-only-func-btn" %>
+      <% end%>
+    </div>
     <div class="detail-image-class">
       <%= image_tag @post.image, class:"detail-image" if @post.image.attached? %>
     </div>

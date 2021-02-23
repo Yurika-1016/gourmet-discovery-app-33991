@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   devise_for :users
   root to: 'welcomes#index'
-  resources :posts, only:[:index, :new, :create, :show] do
+  resources :posts do
     collection do
       get "search_hokkaido","search_aomori","search_iwate",
           "search_akita","search_miyagi","search_yamagata",

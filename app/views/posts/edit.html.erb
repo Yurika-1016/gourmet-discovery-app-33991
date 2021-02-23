@@ -1,0 +1,66 @@
+<%=render 'share/header' %>
+
+<div class="main">
+  <div class="post-main">
+  <h2>投稿を編集する</h2>
+
+  <%= form_with(model: @post, url: post_path, local: true ) do |f| %>
+    <%= render 'share/error_messages', model: @post, model: f.object %>
+
+    <div class="selection-list">
+      <div class="field">
+        <%= f.label :ジャンル %>
+        <span class="indispensable">必須</span><br />
+        <%= f.collection_select(:genre_id, Genre.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :都道府県 %>
+        <span class="indispensable">必須</span><br />
+        <%= f.collection_select(:prefecture_id, Prefecture.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+
+      <div class="field">
+        <%= f.label :年齢 %>
+        <span class="indispensable">必須</span><br />
+        <%= f.collection_select(:age_id, Age.all, :id, :name, {}, {class:"select-box"}) %>
+      </div>
+    </div>
+
+    <div class="field">
+      <%= f.label :場所 %>
+      <span class="indispensable">必須</span><br />
+      <%= f.text_area :address, placeholder: "例) 〇〇市〇〇町〇〇番地", class:"text-area-form" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :感想 %>
+      <span class="not-indispensable">任意</span><br />
+      <%= f.text_area :text, class:"text-big-area-form" %>
+    </div>
+
+    <div class="field">
+      <%= f.label :画像 %>
+      <span class="indispensable">必須</span><br />
+        <div class="click-upload">
+          <p>
+          クリックしてファイルをアップロード
+          </p>
+          <%= f.file_field :image, id:"post-image" %>
+        </div>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "新規投稿する", class:"post-submit-btn" %>
+    </div>
+  
+  <% end %>
+  
+  </div>
+  <div class="back-root-path">
+    <%= link_to "トップページに戻る", root_path, class:"back-link"  %>
+  </div>
+</div>
+
+
+<%=render 'share/footer' %>
