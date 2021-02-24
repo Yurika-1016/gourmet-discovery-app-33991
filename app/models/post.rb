@@ -8,7 +8,6 @@ class Post < ApplicationRecord
   belongs_to :genre
 
   with_options presence: true do
-    
     with_options numericality: { other_than: 1 } do
       validates :age_id, :prefecture_id, :genre_id
     end
@@ -17,12 +16,11 @@ class Post < ApplicationRecord
   end
 
   def self.search(search)
-    if search != ""
+    if search != ''
       Post.where('text LIKE(?)', "%#{search}%")
-      .or (Post.where('address LIKE(?)', "%#{search}%"))
+          .or(Post.where('address LIKE(?)', "%#{search}%"))
     else
       Post.all
     end
   end
-
 end
