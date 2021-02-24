@@ -1,0 +1,46 @@
+.mypage-main{
+  margin-top: 80px;
+  z-index: 10;
+  height: auto;
+}
+
+.my-profile{
+  font-size: 14px;
+  height: 150px;
+  background-color: silver;
+  padding-top: 10px;
+  padding-left: 30px;
+  display: block;
+}
+
+.my-profile-btn1{
+  margin-left: 50px;
+}
+
+.my-profile-btn2{
+  margin-left: 5px;
+}
+
+.my-profile-data-all{
+  width: 60%;
+  background-color: white;
+  border:dashed 1px slategray;
+  border-radius: 5px;
+  margin-top: 10px;
+}
+
+.my-profile-data{
+  font-size: 13px;
+  display: flex;
+  margin: 8px;
+}
+
+.my-profile-content{
+  margin-left: 20px;
+}
+
+.my-post-all{
+  margin-left: 30px;
+  padding-top: 30px;
+  font-size: 14px;
+}

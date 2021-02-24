@@ -22,4 +22,5 @@ Rails.application.routes.draw do
           "search-ransack"
     end
   end
+  resources :users, only: :show
 end

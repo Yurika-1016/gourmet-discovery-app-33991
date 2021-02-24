@@ -1,0 +1,67 @@
+<%=render 'share/header' %>
+
+<div class="mypage-main">
+  </div class="mypage-main-upper">
+    <div class="my-profile">
+      <%= "#{current_user.nickname}さんのプロフィール"%>
+        <%= link_to "編集", edit_user_registration_path, class:"my-profile-btn1"%>
+        <%= link_to "削除", user_registration_path, method: :delete, class:"my-profile-btn2"%>
+
+      <div class="my-profile-data-all">
+        <div class="my-profile-data">
+          <div class="my-profile-title">
+            ニックネーム:
+          </div>
+          <div class="my-profile-content">
+            <%= @user.nickname%>
+          </div>
+        </div>
+        <div class="my-profile-data">
+          <div class="my-profile-title">
+            メールアドレス:
+          </div>
+          <div class="my-profile-content">
+            <%= @user.email%>
+          </div>
+        </div>
+        <div class="my-profile-data">
+          <div class="my-profile-title">
+            性別:
+          </div>
+          <div class="my-profile-content">
+            <%= @user.gender.name%>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="my-page-bottom">
+    <div class="my-post-all">
+      <%= "#{current_user.nickname}さんの投稿一覧"%>
+      <div class= post-contents>
+        <ul class="post-lists">
+          <% if @posts.present? %>
+            <% @posts.each do |post|%>
+              <li class='post-list'>
+                <%= link_to post_path(post.id) do %>
+                  <div class="image-list">
+                    <%= image_tag post.image, class:"post-image" if post.image.attached? %>
+                  </div>
+              <% end %>
+              </li>
+            <% end %>
+          <% else %>
+            <div class="non-list">
+              投稿がありません。新規投稿お待ちしています。
+            </div>
+          <% end %>
+        </ul>
+      <%= link_to "トップページに戻る", root_path %>
+    </div>
+
+</div>
+
+
+<%=render 'share/footer' %>
