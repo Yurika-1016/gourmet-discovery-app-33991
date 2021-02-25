@@ -1,7 +1,10 @@
 <%=render 'share/header' %>
 
 <div class="show-page-main">
-  検索結果
+<%= render 'search_box' %>
+  <div class="prefecture_name">
+    検索結果
+  </div>
   <%= render 'search_prefecture', posts: @posts  %>
 </div>
 

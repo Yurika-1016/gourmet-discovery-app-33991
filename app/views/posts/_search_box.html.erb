@@ -1,6 +1,4 @@
-<%=render 'share/header' %>
-<div class="show-page-main">
-  <div class="search-class">
+<div class="search-class">
     <div class="main-search">
       <%= form_with(url:search_posts_path, local: true, method: :get) do |f| %>
         <%= f.text_field :keyword, placeholder:"検索したい感想や場所を入力してね！", class:"main-search-area"%>
@@ -42,32 +40,4 @@
       </div>
       <% end %>
    </div>
-</div> 
-  <div class="prefecture_name">
-  検索結果
-  </div>
-
-  <div class= post-contents>
-  <ul class="post-lists">
-      <% if @results.present? %>
-        <% @results.each do |result|%>
-          <li class='post-list'>
-          <%= link_to post_path(result.id) do %>
-            <div class="image-list">
-              <%= image_tag result.image, class:"post-image" if result.image.attached? %>
-            </div>
-          <% end %>
-          </li>
-        <% end %>
-      <% else %>
-        <div class="non-list">
-          投稿がありません。新規投稿お待ちしています。
-        </div>
-      <% end %>
-  </ul>
-  <%= link_to "トップページに戻る", root_path %>
-  </div>
-
 </div>
-
-<%=render 'share/footer' %>

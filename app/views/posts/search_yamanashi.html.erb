@@ -1,7 +1,10 @@
 <%=render 'share/header' %>
 
 <div class="show-page-main">
-  山梨県のグルメ
+<%= render 'search_box' %>
+  <div class="prefecture_name">
+    山梨県のグルメ
+  </div>
   <%= render 'search_prefecture', posts: @posts  %>
 </div>
 
