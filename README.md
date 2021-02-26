@@ -82,7 +82,7 @@ https://gourmet-discovery-app-33991.herokuapp.com/
 投稿者の性別ごとでの検索機能
 
 # データベース設計
-![demo](https://gyazo.com/8c5427e2ccf43e8154f671b14ba885fb)
+![demo](https://gyazo.com/8c5427e2ccf43e8154f671b14ba885fb/raw)
 
 # ローカルでの動作方法
 https://github.com/Yurika-1016/gourmet-discovery-app-33991.git
