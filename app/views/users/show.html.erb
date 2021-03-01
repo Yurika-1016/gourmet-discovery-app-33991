@@ -1,9 +1,11 @@
 <%=render 'share/header' %>
 
 <div class="mypage-main">
+  <%# ログインしているユーザープロフィール情報一覧（コントローラーで自分のプロフィールのみ閲覧可能の制限済み） %>
   </div class="mypage-main-upper">
     <div class="my-profile">
       <%= "#{current_user.nickname}さんのプロフィール"%>
+        <%# 編集・削除ボタン %>
         <%= link_to "編集", edit_user_registration_path, class:"my-profile-btn1"%>
         <%= link_to "削除", user_registration_path, method: :delete, class:"my-profile-btn2"%>
 
@@ -38,6 +40,7 @@
   </div>
 
   <div class="my-page-bottom">
+    <%# 自分の投稿した投稿一覧 %>
     <div class="my-post-all">
       <%= "#{current_user.nickname}さんの投稿一覧"%>
       <div class= post-contents>

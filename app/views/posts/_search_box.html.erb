@@ -1,11 +1,14 @@
+<%# 検索ゾーン %>
 <div class="search-class">
+    <%# フリーワード検索 %>
     <div class="main-search">
       <%= form_with(url:search_posts_path, local: true, method: :get) do |f| %>
         <%= f.text_field :keyword, placeholder:"検索したい感想や場所を入力してね！", class:"main-search-area"%>
         <%= f.submit "検索", class:"main-search-btn"%>
       <% end %>
     </div>
-
+    
+    <%# ransack検索 %>
     <div class="sub-search">
       <%= search_form_for @p, url: search_ransack_posts_path do |f| %>
       <div class="sub-search-lists">

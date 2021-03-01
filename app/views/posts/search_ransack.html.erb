@@ -1,52 +1,13 @@
 <%=render 'share/header' %>
+<%# 検索ゾーン %>
 <div class="show-page-main">
-  <div class="search-class">
-    <div class="main-search">
-      <%= form_with(url:search_posts_path, local: true, method: :get) do |f| %>
-        <%= f.text_field :keyword, placeholder:"検索したい感想や場所を入力してね！", class:"main-search-area"%>
-        <%= f.submit "検索", class:"main-search-btn"%>
-      <% end %>
-    </div>
-
-    <div class="sub-search">
-      <%= search_form_for @p, url: search_ransack_posts_path do |f| %>
-      <div class="sub-search-lists">
-        <div class="sub-search-title-list">
-          <div class="sub-search-title">
-            <%= f.label :age_id_eq, "年齢"%>
-          </div>
-          <div class="sub-search-list">
-            <%= f.collection_select :age_id_eq, @post_age, :id, :name, include_blank: "指定なし" %>
-          </div>
-        </div>
-
-        <div class="sub-search-title-list">
-          <div class="sub-search-title">
-            <%= f.label :genre_id_eq, "ジャンル"%>
-          </div>
-          <div class="sub-search-list">
-            <%= f.collection_select :genre_id_eq, @post_genre, :id, :name, include_blank: "指定なし" %>
-          </div>
-        </div>
-
-        <div class="sub-search-title-list">
-          <div class="sub-search-title">
-            <%= f.label :prefecture_id_eq, "都道府県"%>
-          </div>
-          <div class="sub-search-list">
-            <%= f.collection_select :prefecture_id_eq, @post_prefecture, :id, :name, include_blank: "指定なし" %>
-          </div>
-        </div>
-          
-        <%= f.submit "検索",class:"sub-search-btn" %>
-      </div>
-      <% end %>
-   </div>
+  <%= render 'search_box' %>
 </div> 
+
   <div class="prefecture_name">
   検索結果
   </div>
-
+  <%# ransack検索の結果一覧 %>
   <div class= post-contents>
   <ul class="post-lists">
       <% if @results.present? %>
